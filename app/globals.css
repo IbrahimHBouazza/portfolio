@@ -6,10 +6,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
 @keyframes ticker {

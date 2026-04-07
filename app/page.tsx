@@ -3,6 +3,7 @@ import Clock from "./components/Clock";
 import CursorDot from "./components/CursorDot";
 import ScatterHero from "./components/ScatterHero";
 import LedgrShowcase from "./components/LedgrShowcase";
+import MobileNav from "./components/MobileNav";
 import { DottedSurface } from "@/components/ui/dotted-surface";
 import { WavePath } from "@/components/ui/wave-path";
 
@@ -28,7 +29,7 @@ export default function Home() {
           © Ibrahim<br />Bouazza
         </a>
 
-        {/* Centre links */}
+        {/* Centre links — desktop only */}
         <nav className="hidden md:flex flex-col items-center gap-0 text-sm font-medium">
           <a href="#about"    className="hover:opacity-50 transition-opacity">About</a>
           <a href="#projects" className="hover:opacity-50 transition-opacity">Projects</a>
@@ -36,13 +37,16 @@ export default function Home() {
           <a href="#skills"   className="hover:opacity-50 transition-opacity">Skills</a>
         </nav>
 
-        {/* Contact */}
+        {/* Contact — desktop only */}
         <a
           href="mailto:hanif287173@gmail.com"
-          className="text-sm font-semibold hover:opacity-50 transition-opacity"
+          className="hidden md:block text-sm font-semibold hover:opacity-50 transition-opacity"
         >
           Contact ↗
         </a>
+
+        {/* Hamburger — mobile only */}
+        <MobileNav />
       </header>
 
       {/* ── HERO ── */}
@@ -375,7 +379,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4">
           <a
             href="mailto:hanif287173@gmail.com"
-            className="rounded-full bg-black dark:bg-white text-white dark:text-black px-8 py-4 text-sm font-semibold transition-all hover:opacity-70 hover:scale-[1.02] active:scale-[0.98]"
+            className="rounded-full bg-black dark:bg-white text-white dark:text-black px-8 py-4 text-sm font-semibold transition-all hover:opacity-70 hover:scale-[1.02] active:scale-[0.98] text-center"
           >
             hanif287173@gmail.com
           </a>
@@ -383,7 +387,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/ibrahim-bouazza-572073255/"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-zinc-300 dark:border-zinc-700 px-8 py-4 text-sm font-semibold transition-all hover:border-black dark:hover:border-white hover:scale-[1.02] active:scale-[0.98]"
+            className="rounded-full border border-zinc-300 dark:border-zinc-700 px-8 py-4 text-sm font-semibold transition-all hover:border-black dark:hover:border-white hover:scale-[1.02] active:scale-[0.98] text-center"
           >
             LinkedIn ↗
           </a>

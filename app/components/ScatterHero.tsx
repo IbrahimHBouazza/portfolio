@@ -17,10 +17,11 @@ export default function ScatterHero() {
   useEffect(() => {
     // Seed random targets once, after mount so we have window dims
     if (!seeded.current) {
+      const isMobile = window.innerWidth < 768;
       targets.current = letters.map(() => ({
-        x: (Math.random() - 0.5) * window.innerWidth * 2.2,
-        y: (Math.random() - 0.5) * window.innerHeight * 2,
-        r: (Math.random() - 0.5) * 80,
+        x: (Math.random() - 0.5) * window.innerWidth * (isMobile ? 1.4 : 2.2),
+        y: (Math.random() - 0.5) * window.innerHeight * (isMobile ? 1.2 : 2),
+        r: (Math.random() - 0.5) * (isMobile ? 40 : 80),
       }));
       seeded.current = true;
     }
