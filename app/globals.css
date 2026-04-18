@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-/* Make dark: classes respond to the .dark class set by next-themes */
-@variant dark (&:where(.dark, .dark *));
-
 @theme inline {
   --font-sans: var(--font-inter);
 }
@@ -12,6 +9,14 @@
   --hero-glow: #C9EBFF;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grid-line: #1f1f1f;
+    --hero-glow: #0d1f30;
+  }
+}
+
+/* Support next-themes class-based toggle */
 .dark {
   --grid-line: #1f1f1f;
   --hero-glow: #0d1f30;
