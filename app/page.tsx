@@ -10,10 +10,12 @@ import { WavePath } from "@/components/ui/wave-path";
 export default function Home() {
   const tickerItems = [
     "Full-Stack Development",
+    "Automation Engineering",
+    "Data Pipeline Design",
+    "API Integrations",
     "SaaS Products",
-    "Web Applications",
-    "API Design",
-    "UI Engineering",
+    "AI Tooling",
+    "Workflow Automation",
     "Cloud Infrastructure",
   ];
 
@@ -27,22 +29,6 @@ export default function Home() {
         {/* Logo */}
         <a href="/" className="text-sm font-semibold leading-none">
           © Ibrahim<br />Bouazza
-        </a>
-
-        {/* Centre links — desktop only */}
-        <nav className="hidden md:flex flex-col items-center gap-0 text-sm font-medium">
-          <a href="#about"    className="hover:opacity-50 transition-opacity">About</a>
-          <a href="#projects" className="hover:opacity-50 transition-opacity">Projects</a>
-          <a href="#websites" className="hover:opacity-50 transition-opacity">Websites</a>
-          <a href="#skills"   className="hover:opacity-50 transition-opacity">Skills</a>
-        </nav>
-
-        {/* Contact — desktop only */}
-        <a
-          href="mailto:hanif287173@gmail.com"
-          className="hidden md:block text-sm font-semibold hover:opacity-50 transition-opacity"
-        >
-          Contact ↗
         </a>
 
         {/* Hamburger — mobile only */}
@@ -60,7 +46,7 @@ export default function Home() {
         <div className="flex items-end justify-between">
           {/* Left: short bio + clock */}
           <div className="space-y-1 text-sm text-zinc-500 dark:text-zinc-400">
-            <p>Full-stack developer — London, UK</p>
+            <p>Full-stack developer &amp; automation engineer — London, UK</p>
             <p><Clock /> GMT</p>
           </div>
 
@@ -115,18 +101,19 @@ export default function Home() {
           </div>
           <p>
             I&apos;m a full-stack developer focused on building clean,
-            production-ready web applications. I work across the entire stack —
+            production-ready web applications and automation systems. I work across the entire stack —
             database design, API architecture, and polished UIs that people enjoy using.
           </p>
           <p>
-            Most of my work is in SaaS: auth, payments, dashboards, real data.
-            I care about shipping things that actually work, not just things
-            that look good in a demo.
+            Lately I&apos;ve been working on automation for businesses that still rely on manual data
+            processes — connecting systems, eliminating repetitive data entry, and building pipelines
+            that just run. If your team spends time moving numbers around by hand, that&apos;s usually
+            a solvable problem.
           </p>
           <div className="flex flex-wrap gap-3 text-sm pt-2">
             <span className="flex items-center gap-2 text-zinc-500">
               <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
-              Available for opportunities
+              Available for new projects
             </span>
             <span className="flex items-center gap-2 text-zinc-500">
               <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
@@ -213,31 +200,29 @@ export default function Home() {
         {/* Ledgr — scroll-driven showcase */}
         <LedgrShowcase />
 
-        {/* Taxi Booking */}
+        {/* Email-to-Excel Automation */}
         <div className="group rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5 bg-white dark:bg-black">
-          <div className="bg-black dark:bg-zinc-900 flex items-center justify-center min-h-52 p-10">
-            <div className="text-center space-y-2">
-              <svg className="h-10 w-10 text-white/40 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-              </svg>
-              <p className="text-white/30 text-xs uppercase tracking-widest">Past contribution</p>
-              <p className="text-white text-xl font-bold">Taxi Booking Platform</p>
-            </div>
+          <div className="bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-8">
+            <Image
+              src="/image.png"
+              alt="n8n Email-to-Excel automation workflow"
+              width={1200}
+              height={300}
+              className="w-full object-contain"
+            />
           </div>
-          <div className="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <div className="flex items-center gap-2.5 mb-1">
-                <h3 className="text-xl font-bold">Taxi Booking Platform</h3>
-                <span className="rounded-full border border-zinc-200 dark:border-zinc-800 px-2.5 py-0.5 text-xs font-medium text-zinc-500">
-                  Contributor
-                </span>
-              </div>
+          <div className="p-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div className="space-y-2 flex-1">
+              <h3 className="text-xl font-bold">Email-to-Excel Automation</h3>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400 font-medium">Send a PDF to an inbox. Get back a formatted Excel file.</p>
               <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                Contributed to a ride-booking system with real-time dispatch, driver tracking, and customer booking flows.
+                End-to-end automation that watches an email inbox for attachments — when a PDF arrives,
+                it&apos;s automatically extracted, sent to an AI model to read and structure the data,
+                converted into a formatted Excel file, and emailed back. No manual steps. No copy-pasting.
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 sm:justify-end">
-              {["Laravel", "PHP", "REST APIs", "SQL", "Git"].map((t) => (
+            <div className="flex flex-wrap gap-2 sm:justify-end sm:max-w-[220px]">
+              {["n8n", "LLM Integration", "PDF Extraction", "Excel", "Email Automation", "Data Processing"].map((t) => (
                 <span key={t} className="rounded-full border border-zinc-200 dark:border-zinc-800 px-3 py-1 text-xs font-medium text-zinc-600 dark:text-zinc-300">
                   {t}
                 </span>
@@ -245,6 +230,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
       </section>
 
       <div className="flex justify-center py-2"><WavePath /></div>
@@ -271,8 +257,14 @@ export default function Home() {
             rel="noopener noreferrer"
             className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 block"
           >
-            <div className="h-48 bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center">
-              <span className="text-4xl font-black tracking-tighter text-white">Aslanza</span>
+            <div className="h-48 overflow-hidden">
+              <Image
+                src="/image copy.png"
+                alt="Aslanza website"
+                width={800}
+                height={400}
+                className="w-full h-full object-cover object-top"
+              />
             </div>
             <div className="p-5 bg-white dark:bg-black">
               <div className="flex items-start justify-between gap-2 mb-2">
@@ -292,8 +284,14 @@ export default function Home() {
             rel="noopener noreferrer"
             className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 block"
           >
-            <div className="h-48 bg-gradient-to-br from-amber-900 to-stone-950 flex items-center justify-center">
-              <span className="text-4xl font-black tracking-tighter text-amber-100">Rymal</span>
+            <div className="h-48 overflow-hidden">
+              <Image
+                src="/image copy 2.png"
+                alt="Rymal Dubai website"
+                width={800}
+                height={400}
+                className="w-full h-full object-cover object-top"
+              />
             </div>
             <div className="p-5 bg-white dark:bg-black">
               <div className="flex items-start justify-between gap-2 mb-2">
@@ -374,7 +372,7 @@ export default function Home() {
           className="font-black tracking-tighter leading-none mb-16"
           style={{ fontSize: "clamp(3rem, 10vw, 12rem)" }}
         >
-          Let&apos;s work<br />together.
+          Got a process that<br />should run itself?<br />Let&apos;s talk.
         </h2>
         <div className="flex flex-col sm:flex-row gap-4">
           <a

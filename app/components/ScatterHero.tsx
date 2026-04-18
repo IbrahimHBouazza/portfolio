@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const LINES = ["Engineering", "is my craft"];
+const LINES = ["Full-stack", "automation", "engineer."];
 
 export default function ScatterHero() {
   // Flatten all letters across both lines into one array
@@ -12,19 +12,14 @@ export default function ScatterHero() {
 
   const refs = useRef<(HTMLSpanElement | null)[]>([]);
   const targets = useRef<{ x: number; y: number; r: number }[]>([]);
-  const seeded = useRef(false);
 
   useEffect(() => {
-    // Seed random targets once, after mount so we have window dims
-    if (!seeded.current) {
-      const isMobile = window.innerWidth < 768;
-      targets.current = letters.map(() => ({
-        x: (Math.random() - 0.5) * window.innerWidth * (isMobile ? 1.4 : 2.2),
-        y: (Math.random() - 0.5) * window.innerHeight * (isMobile ? 1.2 : 2),
-        r: (Math.random() - 0.5) * (isMobile ? 40 : 80),
-      }));
-      seeded.current = true;
-    }
+    const isMobile = window.innerWidth < 768;
+    targets.current = letters.map(() => ({
+      x: (Math.random() - 0.5) * window.innerWidth * (isMobile ? 1.4 : 2.2),
+      y: (Math.random() - 0.5) * window.innerHeight * (isMobile ? 1.2 : 2),
+      r: (Math.random() - 0.5) * (isMobile ? 40 : 80),
+    }));
 
     const onScroll = () => {
       // Scatter over first 80vh of scroll
@@ -49,7 +44,7 @@ export default function ScatterHero() {
   return (
     <h1
       className="font-black tracking-tighter leading-[0.9] select-none"
-      style={{ fontSize: "clamp(4.5rem, 15vw, 17rem)" }}
+      style={{ fontSize: "clamp(3rem, 10vw, 11rem)" }}
     >
       {LINES.map((line, li) => (
         <span key={li} className="block overflow-visible">
