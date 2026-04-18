@@ -20,10 +20,10 @@ export default function Home() {
   ];
 
   const clients = [
-    { name: "BT Group", logo: "/bt-logo.png" },
-    { name: "SONY", logo: "/Sony-logo.png" },
-    { name: "Adecco", logo: "/Adecco_logo_(2016).svg.png" },
-    { name: "Bridgestone", logo: "/5108.T-1ff3eae8.png" },
+    { name: "BT Group", logo: "/bt-logo.png", height: "h-7" },
+    { name: "SONY", logo: "/Sony-logo.png", height: "h-7" },
+    { name: "Adecco", logo: "/Adecco_logo_(2016).svg.png", height: "h-4" },
+    { name: "Bridgestone", logo: "/5108.T-1ff3eae8.png", height: "h-7" },
   ];
 
   return (
@@ -168,7 +168,7 @@ export default function Home() {
                     key={c.name}
                     className="h-12 px-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center"
                   >
-                    <Image src={c.logo} alt={c.name} width={80} height={28} className="object-contain h-7 w-auto dark:invert" />
+                    <Image src={c.logo} alt={c.name} width={80} height={28} className={`object-contain w-auto dark:invert ${c.height}`} />
                   </div>
                 ) : (
                   <span
