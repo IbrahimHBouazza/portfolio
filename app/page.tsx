@@ -78,7 +78,7 @@ export default function Home() {
           <div className="space-y-2">
             <p className="text-xs uppercase tracking-widest text-zinc-400">Automations</p>
             <h2 className="text-4xl sm:text-5xl font-black tracking-tighter leading-none">
-              Workflows I&apos;ve<br />built &amp; shipped.
+              Projects I&apos;ve<br />built &amp; shipped.
             </h2>
           </div>
           <span className="text-xs text-zinc-400">02</span>
