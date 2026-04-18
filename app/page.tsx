@@ -202,14 +202,16 @@ export default function Home() {
 
         {/* Email-to-Excel Automation */}
         <div className="group rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5 bg-white dark:bg-black">
-          <div className="bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-8">
-            <Image
-              src="/image.png"
-              alt="n8n Email-to-Excel automation workflow"
-              width={1200}
-              height={300}
-              className="w-full object-contain"
-            />
+          <div className="bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center px-6 py-6 sm:px-10 sm:py-8">
+            <div className="w-full max-w-2xl rounded-lg overflow-hidden aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/A9HfXNOLKn0"
+                title="Email-to-Excel Automation Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
           </div>
           <div className="p-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
             <div className="space-y-2 flex-1">
