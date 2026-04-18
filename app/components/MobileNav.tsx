@@ -3,11 +3,10 @@
 import { useState, useEffect } from "react";
 
 const links: [string, string][] = [
-  ["About",    "#about"],
   ["Projects", "#projects"],
-  ["Websites", "#websites"],
+  ["About",    "#about"],
   ["Skills",   "#skills"],
-  ["Contact",  "mailto:hanif287173@gmail.com"],
+  ["Contact",  "mailto:bouazza287173@gmail.com"],
 ];
 
 export default function MobileNav() {
@@ -63,7 +62,7 @@ export default function MobileNav() {
           </nav>
 
           {/* Footer */}
-          <p className="px-6 pb-8 text-xs text-zinc-400">Full-stack developer — London, UK</p>
+          <p className="px-6 pb-8 text-xs text-zinc-400">AI Automation Specialist — London, UK</p>
         </div>
       )}
     </>
