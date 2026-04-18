@@ -72,7 +72,7 @@ export default function Home() {
       {/* ── PROJECTS ── */}
       <section
         id="projects"
-        className="px-6 py-28 md:px-10 md:py-36 max-w-screen-xl mx-auto w-full space-y-12 border-b border-zinc-100 dark:border-zinc-900"
+        className="px-6 py-28 md:px-10 md:py-36 max-w-screen-xl mx-auto w-full space-y-12 border-b border-zinc-100 dark:border-zinc-800"
       >
         <div className="flex items-end justify-between">
           <div className="space-y-2">
@@ -124,7 +124,7 @@ export default function Home() {
       <div className="flex justify-center py-2"><WavePath /></div>
 
       {/* ── CURRENT POSITION ── */}
-      <section className="px-6 py-28 md:px-10 md:py-36 grid md:grid-cols-2 gap-16 md:gap-32 items-start max-w-screen-xl mx-auto w-full border-b border-zinc-100 dark:border-zinc-900">
+      <section className="px-6 py-28 md:px-10 md:py-36 grid md:grid-cols-2 gap-16 md:gap-32 items-start max-w-screen-xl mx-auto w-full border-b border-zinc-100 dark:border-zinc-800">
         <div className="space-y-4">
           <p className="text-xs uppercase tracking-widest text-zinc-400">Current Position</p>
           <h2 className="text-4xl sm:text-5xl font-black tracking-tighter leading-none">
@@ -140,7 +140,7 @@ export default function Home() {
                 alt="BT Group"
                 width={40}
                 height={40}
-                className="object-contain w-full h-full"
+                className="object-contain w-full h-full dark:brightness-0 dark:invert"
               />
             </div>
             <div>
@@ -168,7 +168,7 @@ export default function Home() {
                     key={c.name}
                     className="h-12 px-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center"
                   >
-                    <Image src={c.logo} alt={c.name} width={80} height={28} className={`object-contain w-auto dark:invert ${c.height}`} />
+                    <Image src={c.logo} alt={c.name} width={80} height={28} className={`object-contain w-auto dark:brightness-0 dark:invert ${c.height}`} />
                   </div>
                 ) : (
                   <span
@@ -192,7 +192,7 @@ export default function Home() {
       {/* ── ABOUT ── */}
       <section
         id="about"
-        className="px-6 py-28 md:px-10 md:py-36 grid md:grid-cols-2 gap-16 md:gap-32 items-start max-w-screen-xl mx-auto w-full border-b border-zinc-100 dark:border-zinc-900"
+        className="px-6 py-28 md:px-10 md:py-36 grid md:grid-cols-2 gap-16 md:gap-32 items-start max-w-screen-xl mx-auto w-full border-b border-zinc-100 dark:border-zinc-800"
       >
         <div className="space-y-4">
           <p className="text-xs uppercase tracking-widest text-zinc-400">About</p>
@@ -246,7 +246,7 @@ export default function Home() {
       {/* ── SKILLS ── */}
       <section
         id="skills"
-        className="px-6 py-28 md:px-10 md:py-36 max-w-screen-xl mx-auto w-full border-b border-zinc-100 dark:border-zinc-900 space-y-16"
+        className="px-6 py-28 md:px-10 md:py-36 max-w-screen-xl mx-auto w-full border-b border-zinc-100 dark:border-zinc-800 space-y-16"
       >
         <div className="space-y-4">
           <p className="text-xs uppercase tracking-widest text-zinc-400">Skills</p>
@@ -324,7 +324,7 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="border-t border-zinc-100 dark:border-zinc-900 px-6 py-6 md:px-10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-zinc-400">
+      <footer className="border-t border-zinc-100 dark:border-zinc-800 px-6 py-6 md:px-10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-zinc-400">
         <span>© {new Date().getFullYear()} Ibrahim Bouazza</span>
         <span>AI Automation Specialist — London, UK</span>
       </footer>
