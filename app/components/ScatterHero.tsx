@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const LINES = ["Full-stack", "automation", "engineer."];
+const LINES = ["Full-stack", "AI automation", "engineer."];
 
 export default function ScatterHero() {
   // Flatten all letters across both lines into one array
@@ -42,27 +42,35 @@ export default function ScatterHero() {
   let idx = 0;
 
   return (
-    <h1
-      className="font-black tracking-tighter leading-[0.9] select-none"
-      style={{ fontSize: "clamp(3rem, 10vw, 11rem)" }}
-    >
-      {LINES.map((line, li) => (
-        <span key={li} className="block overflow-visible">
-          {line.split("").map((char) => {
-            const i = idx++;
-            return (
-              <span
-                key={i}
-                ref={(el) => { refs.current[i] = el; }}
-                className="inline-block"
-                style={{ willChange: "transform" }}
-              >
-                {char === " " ? "\u00a0" : char}
-              </span>
-            );
-          })}
-        </span>
-      ))}
-    </h1>
+    <>
+      <h1
+        className="font-black tracking-tighter leading-[0.9] select-none"
+        style={{ fontSize: "clamp(3rem, 10vw, 11rem)" }}
+      >
+        {LINES.map((line, li) => (
+          <span key={li} className="block overflow-visible">
+            {line.split("").map((char) => {
+              const i = idx++;
+              return (
+                <span
+                  key={i}
+                  ref={(el) => { refs.current[i] = el; }}
+                  className="inline-block"
+                  style={{ willChange: "transform" }}
+                >
+                  {char === " " ? "\u00a0" : char}
+                </span>
+              );
+            })}
+          </span>
+        ))}
+      </h1>
+      <p
+        className="mt-4 text-white/60 font-medium tracking-wide select-none"
+        style={{ fontSize: "clamp(0.85rem, 2vw, 1.1rem)" }}
+      >
+        I specialise in automating data inputs, outputs & workflows end-to-end.
+      </p>
+    </>
   );
 }

@@ -48,7 +48,7 @@ export default function Home() {
 
         <div className="flex items-end justify-between">
           <div className="space-y-1 text-sm text-zinc-600 dark:text-zinc-300">
-            <p>AI automation specialist — London, UK</p>
+            <p>Full-Stack Engineer @ BT Group — London, UK</p>
             <p><Clock /> GMT</p>
           </div>
           <span className="text-sm font-semibold">Scroll ↘</span>
@@ -181,7 +181,7 @@ export default function Home() {
               )}
             </div>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 pt-1">
-              Including Fortune 500 enterprises across Europe &amp; globally.
+              Including Fortune Global 500 enterprises across Europe &amp; globally.
             </p>
           </div>
         </div>
@@ -246,43 +246,46 @@ export default function Home() {
       {/* ── SKILLS ── */}
       <section
         id="skills"
-        className="px-6 py-28 md:px-10 md:py-36 max-w-screen-xl mx-auto w-full border-b border-zinc-100 dark:border-zinc-800 space-y-16"
+        className="px-6 py-28 md:px-10 md:py-36 max-w-screen-xl mx-auto w-full border-b border-zinc-100 dark:border-zinc-800"
       >
-        <div className="space-y-4">
+        <div className="space-y-4 mb-16">
           <p className="text-xs uppercase tracking-widest text-zinc-400">Skills</p>
           <h2 className="text-4xl sm:text-5xl font-black tracking-tighter leading-none">
             Tools I work<br />with daily.
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
           {[
             {
               label: "Automation",
-              items: ["n8n", "Make.com", "Zapier", "OpenAI API", "LLM Pipelines"],
+              items: ["n8n", "Make.com", "Zapier", "OpenAI API", "Claude API", "LLM Pipelines"],
             },
             {
               label: "Frontend",
-              items: ["Next.js", "TypeScript", "Tailwind", "React"],
+              items: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
             },
             {
               label: "Backend",
-              items: ["Node.js", "Express", "PHP", "Laravel", "REST APIs"],
+              items: ["Node.js", "Express", "PHP", "REST APIs"],
             },
             {
               label: "Database & Cloud",
-              items: ["PostgreSQL", "Supabase", "AWS S3", "AWS RDS", "Docker"],
+              items: ["PostgreSQL", "Supabase", "AWS", "Docker"],
             },
           ].map((category) => (
-            <div key={category.label} className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400">
+            <div
+              key={category.label}
+              className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-10 py-8"
+            >
+              <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 sm:w-36 shrink-0 pt-1">
                 {category.label}
               </p>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-wrap gap-2">
                 {category.items.map((item) => (
                   <span
                     key={item}
-                    className="border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-2.5 text-sm font-medium text-zinc-800 dark:text-zinc-100 transition-all duration-150 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black hover:border-black dark:hover:border-white cursor-default select-none"
+                    className="rounded-full border border-zinc-200 dark:border-zinc-700 px-4 py-1.5 text-sm font-medium text-zinc-800 dark:text-zinc-100 hover:bg-black hover:text-white hover:border-black dark:hover:bg-white dark:hover:text-black dark:hover:border-white transition-all duration-150 cursor-default select-none"
                   >
                     {item}
                   </span>
